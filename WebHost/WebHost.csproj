@@ -173,7 +173,8 @@
     <Content Include="wwwroot\index.html" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration.cs" />
+    <Compile Include="Configuration\LoggerConfiguration.cs" />
+    <Compile Include="Configuration\XSocketServerConfiguration.cs" />
     <Compile Include="Controllers\DragController.cs" />
     <Compile Include="Controllers\MoveDoneInfo.cs" />
     <Compile Include="Controllers\MoveStartInfo.cs" />
