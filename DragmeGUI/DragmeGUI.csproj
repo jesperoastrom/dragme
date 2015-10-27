@@ -58,8 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="contents\site.css" />
+    <Content Include="scripts\dragKing.js" />
     <Content Include="index.html" />
-    <Content Include="scripts\app.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
