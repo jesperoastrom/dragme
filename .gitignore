@@ -1,2 +1,6 @@
 *.suo
 *.user
+.vs/
+packages/
+WebHost/bin/
+WebHost/obj/
