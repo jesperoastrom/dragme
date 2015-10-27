@@ -2,6 +2,7 @@
 using Microsoft.Owin.FileSystems;
 using Microsoft.Owin.StaticFiles;
 using Owin;
+using XSockets.Owin.Host;
 
 [assembly: OwinStartup(typeof(WebHost.Startup))]
 
@@ -10,6 +11,21 @@ namespace WebHost
     public class Startup
     {
         public void Configuration(IAppBuilder app)
+        {
+            ConfigureStaticFiles(app);
+            ConfigureXSockets(app);
+        }
+
+        private static void ConfigureXSockets(IAppBuilder app)
+        {
+            app.UseXSockets(new OwinHostConfiguration
+            {
+                WithInterceptors = true,
+                WithXSocketsEndpoint = true
+            });
+        }
+
+        private static void ConfigureStaticFiles(IAppBuilder app)
         {
             var physicalFileSystem = new PhysicalFileSystem(@".\wwwroot");
             var options = new FileServerOptions
