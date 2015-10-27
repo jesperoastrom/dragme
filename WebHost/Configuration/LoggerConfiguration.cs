@@ -11,7 +11,7 @@ namespace WebHost.Configuration
             Log.Logger = new Serilog.LoggerConfiguration()
                 .MinimumLevel.Information()
                 .WriteTo.ColoredConsole()
-                .WriteTo.RollingFile(Path.Combine(Directory.GetCurrentDirectory(), "Log\\Log-{Date}.txt"))
+                //.WriteTo.RollingFile(Path.Combine(Directory.GetCurrentDirectory(), "Log\\Log-{Date}.txt"))
                 .WriteTo.Trace()
                 .CreateLogger();
         }

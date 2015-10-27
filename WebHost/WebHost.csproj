@@ -180,6 +180,7 @@
     <Compile Include="Controllers\MoveStartInfo.cs" />
     <Compile Include="Controllers\Position.cs" />
     <Compile Include="Interceptors\ErrorInterceptor.cs" />
+    <Compile Include="Pipeline\ConnectionInterceptor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

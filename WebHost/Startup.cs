@@ -18,7 +18,11 @@ namespace WebHost
 
         private static void ConfigureXSockets(IAppBuilder app)
         {
-            app.UseXSockets(true);
+            app.UseXSockets(new OwinHostConfiguration
+            {
+                WithInterceptors = true,
+                WithXSocketsEndpoint = true
+            });
         }
 
         private static void ConfigureStaticFiles(IAppBuilder app)
